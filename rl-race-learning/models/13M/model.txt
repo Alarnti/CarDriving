@@ -1,0 +1,8 @@
+    model.add(Convolution2D(16, 8, 8, activation='relu', border_mode='same',
+                              input_shape=input_shape, subsample=(4, 4)))
+    model.add(Convolution2D(32, 4, 4, activation='relu', border_mode='same', subsample=(2, 2)))
+    model.add(Flatten())
+    model.add(Dense(256, input_shape=(2,), activation='relu'))
+    model.add(Dense(128, activation='relu'))
+    model.add(Dense(output_units, activation='linear'))
+    model.compile(optimizer='RMSprop', loss='mse', metrics=['mean_squared_error'])

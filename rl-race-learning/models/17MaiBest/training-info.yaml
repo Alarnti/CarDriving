@@ -1,0 +1,4 @@
+batches_per_frame: 1
+episode: 1816
+frames: 232000
+mean_training_time: 0.015796098088029238
